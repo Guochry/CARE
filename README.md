@@ -2,16 +2,9 @@
 This repository is the official implementation of paper: **[CARE: Aligning Language Models for Regional Cultural Awareness](https://arxiv.org/pdf/2311.04072.pdf)**. 
 
 
-## Quick Start
-You should clone the TextBox repository and follow its instructions.
-```
-git clone https://github.com/RUCAIBox/TextBox.git && cd TextBox
-bash install.sh
-```
+## CARE Datasets
 
-## SPA Datasets
-
-You can download SPA datasets in: https://huggingface.co/datasets/RUCAIBox/Erya-dataset. You should download datasets such as xint in it and place them in the `dataset` folder.
+You can download CARE dataset in: https://huggingface.co/datasets/RUCAIBox/Erya-dataset.
 
 
 
