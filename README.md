@@ -8,11 +8,11 @@ You can download CARE dataset in: https://huggingface.co/datasets/RUCAIBox/Erya-
 
 
 
-## Alignment tuning and Inference
+## CARE model Inference
 After setting up the environment, you can either use FIGA model in the zero-shot scenario, or train it on your own dataset from scratch.
 
 ### Inference
-We have released FIGA model in: [https://huggingface.co/RUCAIBox/Erya](https://huggingface.co/RUCAIBox/Erya), which you can use directly as below.
+We have released CARE model in: [https://huggingface.co/RUCAIBox/Erya](https://huggingface.co/RUCAIBox/Erya), which you can use directly as below.
 
 ```
 from transformers import BertTokenizer, CPTForConditionalGeneration
@@ -27,19 +27,16 @@ pred_ids = model.generate(max_new_tokens=256, **input_ids)
 print(tokenizer.batch_decode(pred_ids, skip_special_tokens=True))
 ```
 
-### Tuning
-To align your own model on another dataset from scratch, you can go as below.
+## Evaluation
+To evaluate the model with CARE setup, you can assess our test set and use our prompt.
 
-```
-python run_textbox.py --model=CPT --dataset=[dataset] --model_path=RUCAIBox/Erya4FT --epochs=[epoch_nums]
-```
 
 
 ## Acknowledgment
 Please cite the following paper if you find our code or data helpful.
 
 ```
-@article{guo2023beyond,
+@article{guo2025care,
   title={CARE: Aligning Language Models for Regional Cultural Awareness},
   author={Guo, Geyang and Naous, Tarek and Wakaki, Hiromi and Nishimura, Yukiko and Mitsufuji, Yuki and Ritter, Alan and Xu, Wei},
   journal={arXiv preprint arXiv:2311.04072},
