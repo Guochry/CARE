@@ -1,4 +1,4 @@
-# CARE <img src="fig/Hugging.jpg" alt="CARE Banner" width="600"/>
+# CARE <img src="fig/Hugging.jpg" alt="CARE Banner" width="60"/>
 This repository is the official implementation of our paper: **[CARE: Aligning Language Models for Regional Cultural Awareness](https://arxiv.org/pdf/2311.04072.pdf)**. 
 
 
