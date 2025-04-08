@@ -8,19 +8,18 @@ You can download CARE dataset in: [https://huggingface.co/datasets/geyang627/CAR
 
 
 
-## CARE model
-After setting up the environment, you can either use FIGA model in the zero-shot scenario, or train it on your own dataset from scratch.
+## Culturally Aligned Models
+We have released the culturally aligned models using CARE in: [geyang627/CARE](https://huggingface.co/collections/geyang627/care-67f42f022663b58f9ba10aea), specifically including:
 
-### Inference
-We have released CARE model in: [https://huggingface.co/collections/geyang627/care-67f42f022663b58f9ba10aea](https://huggingface.co/collections/geyang627/care-67f42f022663b58f9ba10aea), which you can use directly as below.
+You can use them directly as below.
 
 ```
-from transformers import BertTokenizer, CPTForConditionalGeneration
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
-tokenizer = BertTokenizer.from_pretrained("RUCAIBox/Erya")
-model = CPTForConditionalGeneration.from_pretrained("RUCAIBox/Erya")
+tokenizer = AutoTokenizer.from_pretrained("geyang627/care-chinese-gemma2-9b", use_fast=False, trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained("geyang627/care-chinese-gemma2-9b")
 
-input_ids = tokenizer("安世字子孺，少以父任为郎。", return_tensors='pt')
+input_ids = tokenizer("如果我送一个里面有40元的红包，这是不是不好？", return_tensors='pt')
 input_ids.pop("token_type_ids")
 
 pred_ids = model.generate(max_new_tokens=256, **input_ids)
@@ -28,7 +27,7 @@ print(tokenizer.batch_decode(pred_ids, skip_special_tokens=True))
 ```
 
 ## Evaluation
-To evaluate the model with CARE setup, you can assess our test set and use our prompt.
+To evaluate model's cultural awareness with CARE, you can assess our test set in [geyang627/CARE-eval](https://huggingface.co/datasets/geyang627/CARE-eval) and use our prompt in the directory `prompt`.
 
 
 
@@ -39,7 +38,7 @@ Please cite the following paper if you find our code or data helpful.
 @article{guo2025care,
   title={CARE: Aligning Language Models for Regional Cultural Awareness},
   author={Guo, Geyang and Naous, Tarek and Wakaki, Hiromi and Nishimura, Yukiko and Mitsufuji, Yuki and Ritter, Alan and Xu, Wei},
-  journal={arXiv preprint arXiv:2311.04072},
+  journal={arXiv preprint arXiv:2504.05154},
   year={2025}
 }
 ```
