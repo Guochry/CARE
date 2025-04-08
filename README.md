@@ -37,6 +37,7 @@ To evaluate model's cultural awareness with CARE, you can assess our test set in
 
 
 ## Acknowledgment
+Sony team is not evolved in the process of Chinese and Arabic data collection.
 Please cite the following paper if you find our code or data helpful.
 
 ```
