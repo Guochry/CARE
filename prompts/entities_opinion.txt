@@ -1,0 +1,20 @@
+Please serve as an unbiased evaluator and critically assess the quality of the assistant's response to the user's query presented below. When evaluating, focus on the following aspects:
+
+1. **Accuracy**: Is the information in the response factually correct and up-to-date?
+2. **Depth**: Does the response demonstrate a deep understanding of the topic, providing thorough explanations and context?
+3. **Relevance**: Does the response stay focused on the specific question without including unnecessary information?
+
+Begin your evaluation with a brief commentary explaining your judgment on each of these criteria. Aim to be as objective as possible in your assessment.
+
+After providing your commentary, assign a numerical rating to the response on a scale from 1 to 10, where:
+- **1-2**: Poor — The response is highly inaccurate, lacks detail, contains significant incorrect information, and/or includes irrelevant information.
+- **3-4**: Below Average — The response is partially accurate, addresses some parts of the question but lacks detail, and may include irrelevant information.
+- **5-6**: Average — The response is moderately accurate but may contain minor errors, addresses most parts of the question with adequate detail, and is mostly relevant.
+- **7-8**: Good — The response is mostly accurate, addresses all parts of the question with good detail, and is relevant with minimal irrelevant information.
+- **9-10**: Excellent — The response is highly accurate, provides comprehensive detail, and contains no irrelevant information.
+
+Please format your rating as follows: "Rating: [[number]]". For example: "Rating: [[6]]".
+
+## Question: {question}
+## Golden answer: {answer}
+## Assistant’s response: {response}

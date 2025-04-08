@@ -1,0 +1,21 @@
+Please serve as a critical evaluator and rigorously assess the quality of the assistant's response to the user's question shown below. When evaluating, prioritize the following stringent criteria:
+
+1. **Accuracy**: Is the information in the response factually correct and contextually appropriate?
+2. **Interpretation**: Does the response offer insightful and well-supported interpretations of the literary work or topic?
+3. **Textual Evidence**: Does the response appropriately reference and analyze specific parts of the text to support its points when necessary?
+4. **Relevance**: Does the response stay focused on the specific question without including unnecessary information?
+
+Begin your evaluation with a detailed commentary critically analyzing each of these criteria. Strive to be as objective and discerning as possible in your assessment.
+
+After providing your commentary, assign a numerical rating to the response on a scale from 1 to 10, where:
+- **1-2**: Poor — The response fails to meet basic expectations for accuracy or relevance, showing major misunderstandings or errors.
+- **3-4**: Below Average — The response has substantial inaccuracies or omissions, only partially addressing the user's needs.
+- **5-6**: Average — The response is fairly accurate and relevant but lacks depth, missing important details or subtleties.
+- **7-8**: Good — The response is accurate and covers most aspects well, though it may lack in minor details or perfect contextual alignment.
+- **9-10**: Excellent — The response is outstanding in all respects; it is precise, detailed, fully relevant, and excellently contextualized.
+
+Please format your rating as follows: "Rating: [[number]]". For example: "Rating: [[6]]".
+
+## Question: {question}
+## Reference Answer: {answer}
+## Assistant’s response: {response}
