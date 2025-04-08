@@ -4,7 +4,7 @@ This repository is the official implementation of paper: **[CARE: Aligning Langu
 
 ## CARE Datasets
 
-You can download CARE dataset in: https://huggingface.co/datasets/geyang627/CARE.
+You can download CARE dataset in: [https://huggingface.co/datasets/geyang627/CARE](https://huggingface.co/datasets/geyang627/CARE).
 
 
 
@@ -12,7 +12,7 @@ You can download CARE dataset in: https://huggingface.co/datasets/geyang627/CARE
 After setting up the environment, you can either use FIGA model in the zero-shot scenario, or train it on your own dataset from scratch.
 
 ### Inference
-We have released CARE model in: [https://huggingface.co/datasets/geyang627/CARE](https://huggingface.co/datasets/geyang627/CARE), which you can use directly as below.
+We have released CARE model in: [https://huggingface.co/collections/geyang627/care-67f42f022663b58f9ba10aea](https://huggingface.co/collections/geyang627/care-67f42f022663b58f9ba10aea), which you can use directly as below.
 
 ```
 from transformers import BertTokenizer, CPTForConditionalGeneration
