@@ -29,7 +29,7 @@ print(tokenizer.batch_decode(pred_ids, skip_special_tokens=True))
 ```
 
 ## Evaluation
-To evaluate model's cultural awareness with CARE, you can assess our test set in [geyang627/CARE-eval](https://huggingface.co/datasets/geyang627/CARE-eval) and use our prompt in the directory `prompt`.
+To evaluate model's cultural awareness with CARE, you can assess our test set in [geyang627/CARE-eval](https://huggingface.co/datasets/geyang627/CARE-eval) and use our prompt in the directory `prompts`.
 
 
 
