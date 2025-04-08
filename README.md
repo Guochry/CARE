@@ -8,7 +8,7 @@ You can download CARE dataset in: [https://huggingface.co/datasets/geyang627/CAR
 
 
 
-## CARE model Inference
+## CARE model
 After setting up the environment, you can either use FIGA model in the zero-shot scenario, or train it on your own dataset from scratch.
 
 ### Inference
