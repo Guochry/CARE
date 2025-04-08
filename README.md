@@ -15,16 +15,20 @@ We have released the culturally aligned models using CARE in: [geyang627/CARE](h
 You can use them directly as below.
 
 ```
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from vllm import LLM, SamplingParams
+from transformers import AutoTokenizer
+import torch
 
-tokenizer = AutoTokenizer.from_pretrained("geyang627/care-chinese-gemma2-9b", use_fast=False, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained("geyang627/care-chinese-gemma2-9b")
+model = LLM(model="geyang627/care-chinese-qwen2.5-7b", tensor_parallel_size=torch.cuda.device_count(), dtype="auto", trust_remote_code=True, max_model_len=2048)
 
-input_ids = tokenizer("如果我送一个里面有40元的红包，这是不是不好？", return_tensors='pt')
-input_ids.pop("token_type_ids")
+tokenizer = AutoTokenizer.from_pretrained("geyang627/care-chinese-qwen2.5-7b", use_fast=False, trust_remote_code=True)
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.pad_token_id = tokenizer.eos_token_id
 
-pred_ids = model.generate(max_new_tokens=256, **input_ids)
-print(tokenizer.batch_decode(pred_ids, skip_special_tokens=True))
+sampling_params = SamplingParams(temperature=0.7, top_p=1.0, max_tokens=256)
+outputs = model.generate(["为什么中国人不喜欢数字4？"], sampling_params)
+print(outputs[0].outputs[0].text)
 ```
 
 ## Evaluation
