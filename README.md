@@ -1,5 +1,5 @@
 # CARE
-This repository is the official implementation of paper: **[CARE: Aligning Language Models for Regional Cultural Awareness](https://arxiv.org/pdf/2311.04072.pdf)**. 
+This repository is the official implementation of our paper: **[CARE: Aligning Language Models for Regional Cultural Awareness](https://arxiv.org/pdf/2311.04072.pdf)**. 
 
 
 ## CARE Datasets
