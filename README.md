@@ -11,7 +11,8 @@ Specifically, the `question` field is the culture-specific question, the `respon
 
 
 ## Culturally Aligned Models
-We have released the culturally aligned models using CARE in: [geyang627/CARE](https://huggingface.co/collections/geyang627/care-67f42f022663b58f9ba10aea), specifically including:
+We have released the culturally aligned models using CARE in: [geyang627/CARE](https://huggingface.co/collections/geyang627/care-67f42f022663b58f9ba10aea).
+
 
 You can use them directly as below.
 
